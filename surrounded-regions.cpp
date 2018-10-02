@@ -68,5 +68,15 @@ public:
                 dfs(grid, i, grid[0].size()-1, marked);
             }
         }
+        // now turn all marked[false] cells as false
+        for(int i = 0 ; i < grid.size() ; i++)
+        {
+            for(int j = 0 ; j < grid[0].size() ; j++)
+            {
+                cout << marked[i][j];
+                if (!marked[i][j]) grid[i][j] = 'X';
+            }
+            cout<<endl;
+        }
     }
 };
